@@ -14,6 +14,6 @@ func deriveTonAddress(pub ed25519.PublicKey) string {
     if err != nil {
         panic(fmt.Sprintf("deriveTonAddress: %v", err))
     }
-    return addr.String()
+    return addr.ToHuman(true, false)
 }
 

@@ -10,6 +10,11 @@ path "ton/key-managers/*/txn/sign"
     capabilities = ["create"]
 }
 
+path "ton/key-managers/*/txn/ton/transfer"
+{
+    capabilities = ["create"]
+}
+
 path "ton/key-managers/*"
 {
     capabilities = ["read", "delete"]

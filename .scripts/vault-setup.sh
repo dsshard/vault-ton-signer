@@ -37,7 +37,7 @@ if [[ -f $PLUGIN ]]; then
     ls -lah
     echo "sha256: $sha256"
     vault plugin register -sha256="$sha256" -command="vault-ton-signer-$version" -version="$version" secret vault-ton-signer
-    vault secrets enable -path=ethereum -description="Ethereum signer" -plugin-name=vault-ton-signer plugin
+    vault secrets enable -path=ton -description="Ton signer" -plugin-name=vault-ton-signer plugin
 else
     echo "No plugin found, then no plugin was registered."
 fi
